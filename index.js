@@ -37,8 +37,8 @@ class FoollSeq extends Foola {
     var db = {};
 
     for (var moduleName in server.modules) {
-      var models = server.modules[moduleName];
-      Object.assign(db, module.models);
+      var appModule = server.modules[moduleName];
+      Object.assign(db, appModule.models);
     }
 
     for (var moduleName in server.modules) {
