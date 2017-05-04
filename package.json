@@ -1,6 +1,6 @@
 {
   "name": "fooll-seq",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "class for fooll that adds support of suquelize models",
   "main": "index.js",
   "scripts": {
