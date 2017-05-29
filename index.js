@@ -19,21 +19,23 @@ class FoollSeq extends Foola {
   }
 
   loadModels() {
-    try {
-      var db = this.loadDBConfig();
-      var sequelize = new Sequelize(db.database, db.username, db.password, db);
-      var models = {};
-      var modelsFolderPath = path.resolve(this.dirname, 'models');
+    var db = this.loadDBConfig();
+    var sequelize = new Sequelize(db.database, db.username, db.password, db);
+    var models = {};
+    var modelsFolderPath = path.resolve(this.dirname, 'models');
+    if (fs.existsSync(modelsFolderPath)) {
       var modelsDirFiles = fs.readdirSync(modelsFolderPath);
       modelsDirFiles.forEach(function (modelBase) {
-        var modelPath = path.resolve(modelsFolderPath, modelBase);
-        var model = sequelize.import(modelPath);
-        var modelName = path.parse(modelBase).name;
-        models[modelName] = model;
+        try {
+          var modelPath = path.resolve(modelsFolderPath, modelBase);
+          var model = sequelize.import(modelPath);
+          var modelName = path.parse(modelBase).name;
+          models[modelName] = model;
+        } catch (error) {
+          console.error(error);
+        }
       });
       this.models = models;
-    } catch (error) {
-
     }
   }
 
