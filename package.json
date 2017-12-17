@@ -1,6 +1,6 @@
 {
   "name": "zinky-seq",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "class for fooll that adds support of suquelize models",
   "main": "index.js",
   "scripts": {
