@@ -1,5 +1,5 @@
 {
-  "name": "fooll-seq",
+  "name": "zinky-seq",
   "version": "0.0.3",
   "description": "class for fooll that adds support of suquelize models",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/fooll/fooll-seq.git"
+    "url": "git+ssh://git@github.com/zinkyjs/zinky-seq.git"
   },
   "keywords": [
     "sequelize",
@@ -18,9 +18,9 @@
   "author": "Abu Rawi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fooll/fooll-seq/issues"
+    "url": "https://github.com/zinkyjs/zinky-seq/issues"
   },
-  "homepage": "https://github.com/fooll/fooll-seq#readme",
+  "homepage": "https://github.com/zinkyjs/zinky-seq#readme",
   "dependencies": {
     "foola": "0.0.x",
     "sequelize": "^3.30.4"
